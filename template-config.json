@@ -2,10 +2,10 @@
   "template_id": "chronos_showcase_001",
   "name": "Chronos Luxury Showcase",
   "created_at": "2026-04-21T10:00:00Z",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "theme": {
     "style": "luxury_mechanical",
-    "description": "A sophisticated, high-end product showcase themed around the precision of mechanical watches. Features gear animations, cinematic lighting, and elegant typography.",
+    "description": "A sophisticated, high-end product showcase themed around the precision of mechanical watches. Features clock face numbers, gear animations, cinematic lighting, and elegant typography.",
     "colors": ["#10181f", "#00b7af", "#d4af37", "#ffffff"],
     "mood": "sophisticated, precise, premium, cinematic",
     "tags": ["luxury", "watch", "clock", "precision", "high-end", "mechanical"]

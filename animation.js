@@ -26,6 +26,8 @@ async function loadProducts() {
 }
 
 function initGlobalAnimations() {
+    initClockNumbers();
+
     // Continuous Gear Rotations
     gsap.to(".gear-large .gear-img", {
         rotation: 360,
@@ -56,6 +58,62 @@ function initGlobalAnimations() {
         duration: 60,
         ease: "none",
         repeat: -1
+    });
+}
+
+function initClockNumbers() {
+    const container = document.getElementById('clock-numbers');
+    if (!container) return;
+
+    for (let i = 1; i <= 12; i++) {
+        const numEl = document.createElement('div');
+        numEl.className = 'clock-number';
+        numEl.innerText = i;
+
+        // Calculate position
+        const angle = (i * 30) - 90; // 360/12 = 30 degrees per number, offset by -90 to start at 12
+        const radius = 35; // vh, slightly inside the 40vh radius frame
+
+        const x = Math.cos(angle * (Math.PI / 180)) * radius;
+        const y = Math.sin(angle * (Math.PI / 180)) * radius;
+
+        gsap.set(numEl, {
+            x: `${x}vh`,
+            y: `${y}vh`
+        });
+
+        container.appendChild(numEl);
+    }
+
+    // Reactive glow as second hand passes
+    gsap.ticker.add(() => {
+        const rotation = gsap.getProperty("#second-hand", "rotation") % 360;
+        const normalizedRotation = rotation < 0 ? rotation + 360 : rotation;
+
+        document.querySelectorAll('.clock-number').forEach((num, index) => {
+            const numAngle = ((index + 1) * 30); // 1 = 30deg, 2 = 60deg... 12 = 360deg
+
+            // Calculate distance between hand and number
+            let diff = Math.abs(normalizedRotation - numAngle);
+            if (diff > 180) diff = 360 - diff;
+
+            if (diff < 15) {
+                const intensity = 1 - (diff / 15);
+                gsap.set(num, {
+                    opacity: 0.6 + (intensity * 0.4),
+                    scale: 1 + (intensity * 0.2),
+                    color: intensity > 0.5 ? '#ffffff' : '#d4af37',
+                    textShadow: `0 0 ${10 + (intensity * 20)}px var(--primary)`
+                });
+            } else {
+                gsap.set(num, {
+                    opacity: 0.6,
+                    scale: 1,
+                    color: '#d4af37',
+                    textShadow: '0 0 10px rgba(212, 175, 55, 0.5)'
+                });
+            }
+        });
     });
 }
 

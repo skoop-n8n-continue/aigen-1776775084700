@@ -85,6 +85,23 @@ body {
   z-index: 3;
 }
 
+#clock-numbers {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-number {
+  position: absolute;
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  opacity: 0.6;
+}
+
 #second-hand {
   position: absolute;
   width: 2px;
