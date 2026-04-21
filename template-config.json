@@ -1,0 +1,35 @@
+{
+  "template_id": "chronos_showcase_001",
+  "name": "Chronos Luxury Showcase",
+  "created_at": "2026-04-21T10:00:00Z",
+  "version": "1.0.0",
+  "theme": {
+    "style": "luxury_mechanical",
+    "description": "A sophisticated, high-end product showcase themed around the precision of mechanical watches. Features gear animations, cinematic lighting, and elegant typography.",
+    "colors": ["#10181f", "#00b7af", "#d4af37", "#ffffff"],
+    "mood": "sophisticated, precise, premium, cinematic",
+    "tags": ["luxury", "watch", "clock", "precision", "high-end", "mechanical"]
+  },
+  "capabilities": {
+    "products_per_cycle": 1,
+    "cycles_through_all_products": true
+  },
+  "animation": {
+    "duration": 12,
+    "fps": 60,
+    "entrance_duration": 2,
+    "idle_duration": 8,
+    "exit_duration": 2,
+    "uses_plugins": ["TextPlugin", "CustomEase"]
+  },
+  "assets": {
+    "background": "https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/skoop-n8n-continue%2Faigen-1776775084700%2Fassets%2Fluxury_clock_background-1776775409996.png",
+    "gears": ["https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/skoop-n8n-continue%2Faigen-1776775084700%2Fassets%2Fluxury_gear_asset-1776775441082.png"],
+    "fonts": ["Cinzel", "Montserrat"]
+  },
+  "technical": {
+    "resolution": "responsive",
+    "performance": "optimized",
+    "browser_compatibility": "chrome_latest"
+  }
+}
