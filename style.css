@@ -5,9 +5,9 @@
 }
 
 :root {
-  --primary: #00b7af; /* Vibrant Teal */
+  --primary: #ff3333; /* Vibrant Red */
   --accent: #d4af37;  /* Gold */
-  --bg-dark: #10181f;
+  --bg-dark: #100505;
   --text-light: #ffffff;
   --font-serif: 'Cinzel', serif;
   --font-sans: 'Montserrat', sans-serif;
@@ -30,17 +30,17 @@ body {
 #background {
   position: absolute;
   inset: 0;
-  background-image: url('https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/skoop-n8n-continue%2Faigen-1776775084700%2Fassets%2Fluxury_clock_background-1776775409996.png');
+  background-image: url('https://skoop-dev-code-agent.s3.us-east-1.amazonaws.com/skoop-n8n-continue%2Faigen-1776775084700%2Fassets%2Fluxury_red_clock_background-1776783305567.png');
   background-size: cover;
   background-position: center;
   z-index: 0;
-  filter: brightness(0.4) saturate(0.8);
+  filter: brightness(0.5) saturate(0.9);
 }
 
 #overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at center, transparent 30%, rgba(16, 24, 31, 0.9) 100%);
+  background: radial-gradient(circle at center, transparent 30%, rgba(16, 5, 5, 0.9) 100%);
   z-index: 1;
 }
 

@@ -123,15 +123,15 @@ function initClockNumbers() {
                 gsap.set(num, {
                     opacity: 0.6 + (intensity * 0.4),
                     scale: 1 + (intensity * 0.2),
-                    color: intensity > 0.5 ? '#ffffff' : '#d4af37',
+                    color: intensity > 0.5 ? '#ffffff' : '#ff3333',
                     textShadow: `0 0 ${10 + (intensity * 20)}px var(--primary)`
                 });
             } else {
                 gsap.set(num, {
                     opacity: 0.6,
                     scale: 1,
-                    color: '#d4af37',
-                    textShadow: '0 0 10px rgba(212, 175, 55, 0.5)'
+                    color: '#ff3333',
+                    textShadow: '0 0 10px rgba(255, 51, 51, 0.5)'
                 });
             }
         });
