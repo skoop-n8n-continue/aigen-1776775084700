@@ -28,6 +28,11 @@ async function loadProducts() {
 function initGlobalAnimations() {
     initClockNumbers();
 
+    // Set initial positions for hands
+    gsap.set("#hour-hand", { rotation: 315 }); // 10:30 position
+    gsap.set("#minute-hand", { rotation: 180 });
+    gsap.set("#second-hand", { rotation: 0 });
+
     // Continuous Gear Rotations
     gsap.to(".gear-large .gear-img", {
         rotation: 360,
@@ -56,6 +61,22 @@ function initGlobalAnimations() {
     gsap.to("#second-hand", {
         rotation: 360,
         duration: 60,
+        ease: "none",
+        repeat: -1
+    });
+
+    // Clock minute hand sweep
+    gsap.to("#minute-hand", {
+        rotation: 360,
+        duration: 3600,
+        ease: "none",
+        repeat: -1
+    });
+
+    // Clock hour hand sweep
+    gsap.to("#hour-hand", {
+        rotation: 360,
+        duration: 43200,
         ease: "none",
         repeat: -1
     });

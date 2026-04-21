@@ -102,6 +102,32 @@ body {
   opacity: 0.6;
 }
 
+#hour-hand {
+  position: absolute;
+  width: 8px;
+  height: 25vh;
+  background: var(--accent);
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  z-index: 4;
+  box-shadow: 0 0 10px var(--accent);
+  border-radius: 4px 4px 0 0;
+}
+
+#minute-hand {
+  position: absolute;
+  width: 5px;
+  height: 35vh;
+  background: var(--accent);
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  z-index: 4;
+  box-shadow: 0 0 10px var(--accent);
+  border-radius: 3px 3px 0 0;
+}
+
 #second-hand {
   position: absolute;
   width: 2px;
@@ -112,6 +138,20 @@ body {
   transform-origin: bottom center;
   z-index: 5;
   box-shadow: 0 0 15px var(--primary);
+}
+
+#clock-center {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--accent);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 6;
+  box-shadow: 0 0 15px var(--accent);
+  border: 2px solid var(--bg-dark);
 }
 
 /* Product Showcase */
